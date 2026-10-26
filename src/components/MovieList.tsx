@@ -11,7 +11,7 @@ function MovieList({ movies }: MovieListProps) {
   }
 
   return (
-    <div className="movie-list">
+    <div className="movies-grid">
       {movies.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}

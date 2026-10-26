@@ -18,24 +18,30 @@ function HomePage() {
       })
       .catch((err) => {
         console.error(err);
-        setError("something went wrong loading movies");
+        setError("Something went wrong loading movies.");
         setLoading(false);
       });
   }, []);
 
-  const filteredMovies = movies.filter((m) =>
-    m.title.toLowerCase().includes(query.toLowerCase()),
+  const filteredMovies = movies.filter((movie) =>
+    movie.title.toLowerCase().includes(query.toLowerCase()),
   );
 
   return (
-    <div>
-      <h1>Movie App</h1>
-      <SearchBar query={query} onChange={setQuery} />
+    <main className="main-container">
+      <div className="page-heading">
+        <div>
+          <p className="eyebrow">DISCOVER</p>
+          <h1>Popular Movies</h1>
+        </div>
 
-      {loading && <p>Loading...</p>}
+        <SearchBar query={query} onChange={setQuery} />
+      </div>
+
+      {loading && <p>Loading movies...</p>}
       {error && <p>{error}</p>}
       {!loading && !error && <MovieList movies={filteredMovies} />}
-    </div>
+    </main>
   );
 }
 
