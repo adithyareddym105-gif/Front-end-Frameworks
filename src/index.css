@@ -1013,7 +1013,7 @@ select {
     gap: 12px;
   }
 }
- 
+
 /* Quiz */
 .quiz-container {
   max-width: 720px;
@@ -1048,6 +1048,37 @@ select {
 
 @media (max-width: 600px) {
   .quiz-options {
+    grid-template-columns: 1fr;
+  }
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0 32px;
+}
+
+.stat-card {
+  padding: 20px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.stat-card strong {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 700px) {
+  .stats-grid {
     grid-template-columns: 1fr;
   }
 }

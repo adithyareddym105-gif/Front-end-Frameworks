@@ -18,12 +18,16 @@ function Header() {
             Home
           </Link>
 
-          <Link to="/quiz" className="btn-icon-label">
-            Quiz
+          <Link to="/favourites" className="btn-icon-label">
+            Favourites
           </Link>
 
           <Link to="/watchlist" className="btn-icon-label">
             Watchlist
+          </Link>
+
+          <Link to="/quiz" className="btn-icon-label">
+            Quiz
           </Link>
 
           <Link to="/about" className="btn-icon-label">
